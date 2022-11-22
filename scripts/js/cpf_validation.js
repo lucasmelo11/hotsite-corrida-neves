@@ -78,21 +78,26 @@ $("#formulario").submit(function () {
   let bairro = $("#bairro");
   let cidade = $("#cidade");
   let uf = $("#uf");
+  let blusa = $("#blusa");
 
   // let complemento = $("#complemento");
   // let campo = $("input");
   // let selecione = $("select");
 
+  bairro;
+
   var emailFilter =
     /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-
+  
+    // ACEITE DOS TERMOS
   if ($("#gridCheck").is(":checked") != true) {
-    $("#gridCheck").addClass("is-invalid")
-  }else{
-    $("#gridCheck").removeClass("is-invalid")
-    $("#gridCheck").addClass("is-valid")
+    $("#gridCheck").addClass("is-invalid");
+  } else {
+    $("#gridCheck").removeClass("is-invalid");
+    $("#gridCheck").addClass("is-valid");
   }
 
+  // NOME
   if (nome.val().length < 8) {
     nome.addClass("is-invalid");
   } else {
@@ -100,6 +105,7 @@ $("#formulario").submit(function () {
     nome.addClass("is-valid");
   }
 
+  // NASCIMENTO
   if (nascimento.val().length != 10) {
     nascimento.addClass("is-invalid");
   } else {
@@ -107,6 +113,7 @@ $("#formulario").submit(function () {
     nascimento.addClass("is-valid");
   }
 
+  // TELEFONE
   if (telefone.val() == 0) {
     telefone.addClass("is-invalid");
   } else {
@@ -114,6 +121,7 @@ $("#formulario").submit(function () {
     telefone.addClass("is-valid");
   }
 
+  // CEP
   if (cep.val() == 0) {
     cep.addClass("is-invalid");
   } else {
@@ -121,6 +129,7 @@ $("#formulario").submit(function () {
     cep.addClass("is-valid");
   }
 
+  // EMAIL
   if (!emailFilter.test(email.val())) {
     email.addClass("is-invalid");
   } else {
@@ -128,6 +137,7 @@ $("#formulario").submit(function () {
     email.addClass("is-valid");
   }
 
+  // LOGRADOURO
   if (logradouro.val() == 0) {
     logradouro.addClass("is-invalid");
   } else {
@@ -135,6 +145,7 @@ $("#formulario").submit(function () {
     logradouro.addClass("is-valid");
   }
 
+  // NUMERO
   if (numero.val() == 0) {
     numero.addClass("is-invalid");
   } else {
@@ -142,21 +153,15 @@ $("#formulario").submit(function () {
     numero.addClass("is-valid");
   }
 
-  if (genero.val() == "") {
-    genero.addClass("is-invalid");
-    return false;
-  } else {
-    genero.removeClass("is-invalid");
-    genero.addClass("is-valid");
-  }
-
-  if (bairro.val() == 0) {
+  // BAIRRO
+  if (bairro.val() == "") {
     bairro.addClass("is-invalid");
   } else {
     bairro.removeClass("is-invalid");
     bairro.addClass("is-valid");
   }
 
+  // CIDADE
   if (cidade.val() == 0) {
     cidade.addClass("is-invalid");
   } else {
@@ -164,6 +169,7 @@ $("#formulario").submit(function () {
     cidade.addClass("is-valid");
   }
 
+  // UF
   if (uf.val() == "") {
     uf.addClass("is-invalid");
   } else {
@@ -171,8 +177,26 @@ $("#formulario").submit(function () {
     uf.addClass("is-valid");
   }
 
-  if (complemento.val() == "") {
-    return true
+  // GENERO
+  if (genero.val() == "") {
+    genero.addClass("is-invalid");
+  } else {
+    genero.removeClass("is-invalid");
+    genero.addClass("is-valid");
+  }
+
+  // // COMPLEMENTO
+  // if (complemento.val() == "") {
+  //   return true;
+  // }
+
+  // BLUSA
+  if (blusa.val() == "0") {
+    blusa.addClass("is-invalid");
+    return false;
+  } else {
+    blusa.removeClass("is-invalid");
+    blusa.addClass("is-valid");
   }
 
   return false;

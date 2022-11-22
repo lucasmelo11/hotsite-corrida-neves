@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Corrida Neves</title>
+    
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -193,7 +194,7 @@
               </div>
 
               <!-- GÊNERO -->
-              <div class="mb-3 col-5 col-md-4">
+              <div class="mb-3 col-6 col-md-4">
                 <label for="genero" class="form-label">Gênero</label>
                 <select
                   class="form-select"
@@ -209,7 +210,7 @@
               </div>
 
               <!-- CEP -->
-              <div class="mb-3 col-7 col-md-3">
+              <div class="mb-3 col-6 col-md-3">
                 <label for="cep" class="form-label">CEP</label>
                 <input
                   type="text"
@@ -267,68 +268,64 @@
               </div>
 
               <!-- CIDADE -->
-              <div class="row">
-                <div class="mb-3 col-12 col-md-7">
-                  <label for="cidade" class="form-label">Cidade</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="cidade"
-                    name="cidade"
-                  />
-                  <div class="invalid-feedback">campo obrigatório</div>
-                </div>
+              <div class="mb-3 col-12 col-md-6">
+                <label for="cidade" class="form-label">Cidade</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="cidade"
+                  name="cidade"
+                />
+                <div class="invalid-feedback">campo obrigatório</div>
+              </div>
 
-                <!-- ESTADO -->
-                <div class="mb-3 col-5 col-md-2">
-                  <label for="uf" class="form-label">UF</label>
-                  <select class="form-select" id="uf" name="uf">
-                    <option value="">Selecione</option>
-                    <option value="AC">AC</option>
-                    <option value="AL">AL</option>
-                    <option value="AP">AP</option>
-                    <option value="AM">AM</option>
-                    <option value="BA">BA</option>
-                    <option value="CE">CE</option>
-                    <option value="DF">DF</option>
-                    <option value="ES">ES</option>
-                    <option value="GO">GO</option>
-                    <option value="MA">MA</option>
-                    <option value="MS">MS</option>
-                    <option value="MT">MT</option>
-                    <option value="MG">MG</option>
-                    <option value="PA">PA</option>
-                    <option value="PB">PB</option>
-                    <option value="PR">PR</option>
-                    <option value="PE">PE</option>
-                    <option value="PI">PI</option>
-                    <option value="RJ">RJ</option>
-                    <option value="RN">RN</option>
-                    <option value="RS">RS</option>
-                    <option value="RO">RO</option>
-                    <option value="RR">RR</option>
-                    <option value="SC">SC</option>
-                    <option value="SP">SP</option>
-                    <option value="SE">SE</option>
-                    <option value="TO">TO</option>
-                  </select>
+              <!-- ESTADO -->
+              <div class="mb-3 col-6 col-md-3">
+                <label for="uf" class="form-label">UF</label>
+                <select class="form-select" id="uf" name="uf">
+                  <option value="">Selecione</option>
+                  <option value="AC">AC</option>
+                  <option value="AL">AL</option>
+                  <option value="AP">AP</option>
+                  <option value="AM">AM</option>
+                  <option value="BA">BA</option>
+                  <option value="CE">CE</option>
+                  <option value="DF">DF</option>
+                  <option value="ES">ES</option>
+                  <option value="GO">GO</option>
+                  <option value="MA">MA</option>
+                  <option value="MS">MS</option>
+                  <option value="MT">MT</option>
+                  <option value="MG">MG</option>
+                  <option value="PA">PA</option>
+                  <option value="PB">PB</option>
+                  <option value="PR">PR</option>
+                  <option value="PE">PE</option>
+                  <option value="PI">PI</option>
+                  <option value="RJ">RJ</option>
+                  <option value="RN">RN</option>
+                  <option value="RS">RS</option>
+                  <option value="RO">RO</option>
+                  <option value="RR">RR</option>
+                  <option value="SC">SC</option>
+                  <option value="SP">SP</option>
+                  <option value="SE">SE</option>
+                  <option value="TO">TO</option>
+                </select>
+              </div>
 
-                  <div class="invalid-feedback">campo obrigatório</div>
-                </div>
-
-                <!-- CAMISA / BLUSA -->
-                <div class="mb-3 col-7 col-md-auto">
-                  <label for="blusa" class="form-label">Tamanho da Blusa</label>
-                  <select class="form-select" id="blusa" name="blusa">
-                    <option value="">Selecione</option>
-                    <option value="pp">PP</option>
-                    <option value="p">P</option>
-                    <option value="m">M</option>
-                    <option value="g">G</option>
-                    <option value="gg">GG</option>
-                  </select>
-                  <div class="invalid-feedback">campo obrigatório</div>
-                </div>
+              <!-- CAMISA / BLUSA -->
+              <div class="mb-3 col-6 col-md-3">
+                <label for="blusa" class="form-label">Tam. da Blusa</label>
+                <select class="form-select" id="blusa" name="blusa">
+                  <option selected value="0">Selecione</option>
+                  <option value="1">PP</option>
+                  <option value="2">P</option>
+                  <option value="3">M</option>
+                  <option value="4">G</option>
+                  <option value="5">GG</option>
+                </select>
+                <!-- <div class="invalid-feedback">campo obrigatório</div> -->
               </div>
 
               <!-- TRAJETO -->
@@ -341,6 +338,7 @@
                     name="trajeto"
                     id="corrida"
                     required
+                    checked
                   />
                   <label class="form-check-label" for="corrida">Corrida</label>
                 </div>
@@ -370,9 +368,13 @@
                   name="termo"
                 />
                 <label class="form-check-label" for="gridCheck">
-                  Li e aceito o
-                  <a href="#" data-target="#termo" data-toggle="modal"
-                    >termo de responsabilidade</a
+                  Li e aceito os
+                  <a
+                    href="#"
+                    data-target="#termo"
+                    data-toggle="modal"
+                    style="text-decoration: none"
+                    >termos de responsabilidade</a
                   >
                 </label>
                 <div class="invalid-feedback">
@@ -430,8 +432,8 @@
 
             <ol>
               <li>
-                Estou ciente dos percursos do evento&nbsp;&nbsp;&ldquo;PEDAL
-                NEVES&rdquo;.&nbsp;
+                Estou ciente dos percursos da &nbsp;&nbsp;&ldquo;03ª CORRIDA AV.
+                EDUARDO BRANDÃO 2022.&rdquo;.&nbsp;
               </li>
               <li>
                 Estou em plenas condi&ccedil;&otilde;es f&iacute;sicas e
@@ -457,9 +459,24 @@
                 organizadores, m&iacute;dia e patrocinadores.&nbsp;
               </li>
               <li>
-                Estou ciente que na hip&oacute;tese de&nbsp;suspens&atilde;o do
-                evento&nbsp;por quest&otilde;es de seguran&ccedil;a
-                p&uacute;blica todos os eventuais custos referentes &agrave;
+                Li, conheço, aceito e me submeto integralmente a todos os termos
+                do regulamento da PROVA.
+              </li>
+              <li>
+                Estou ciente das penalidades e possvel desclassificação que
+                posso sofrer, caso descumpra o regulamento ou cometa falta
+                grave. Excluo meu direito de reclamação sobre tais aspectos da
+                prova.
+              </li>
+              <li>
+                Autorizo o uso de minha imagem, por fotos, vídeos e entrevistas
+                em qualquer meio de comunicação, sem geração de ônus para os
+                realizadores, organizadores, mídia e patrocinadores.
+              </li>
+              <li>
+                Estou ciente que na hip&oacute;tese de&nbsp;suspens&atilde;o da
+                prova por quest&otilde;es de seguran&ccedil;a p&uacute;blica
+                todos os eventuais custos referentes &agrave;
                 locomo&ccedil;&atilde;o, prepara&ccedil;&atilde;o, estadia,
                 inscri&ccedil;&atilde;o, entre outros gastos despendidos pelo
                 atleta ser&aacute; suportado &uacute;nica e exclusivamente por
@@ -474,7 +491,7 @@
               RESPONSABILIDADE, isentando assim quem quer que seja, de toda e
               qualquer responsabilidade legal de tudo o que vier a ocorrer
               comigo por consequ&ecirc;ncia da minha participa&ccedil;&atilde;o
-              neste&nbsp;EVENTO.
+              nesta&nbsp;PROVA.
             </h6>
           </div>
           <div class="modal-footer">
